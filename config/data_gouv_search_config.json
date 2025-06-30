@@ -1,0 +1,37 @@
+{
+    "service-public":{
+        "full_name":"Fiches pratiques Service Public",
+        "metadatas_to_display":[
+            "title",
+            "url",
+            "audience",
+            "text"
+        ]
+    },
+    "travail-emploi":{
+        "full_name":"Fiches pratiques Travail Emploi",
+        "metadatas_to_display":[
+            "title",
+            "url",
+            "text"
+        ]
+    },
+    "annuaire-administrations-etat":{
+        "full_name":"Annuaire des administrations d'Etat",
+        "metadatas_to_display":[
+            "name",
+            "directory_url",
+            "mission_description"
+        ]
+    },
+    "data_gouv_datasets_catalog":{
+        "full_name":"Catalogue des jeux de données data.gouv.fr",
+        "metadatas_to_display":[
+            "title",
+            "organization",
+            "url",
+            "description"
+        ]
+
+    }
+}
