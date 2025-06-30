@@ -1,10 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["data*", "logs*", "__pycache__*"]
+
 [project]
 name = "albert-data-collections"
 version = "0.1.0"
 description = "Useful functionalities and pipelines related to ALBERT's data collections."
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = "MIT"
 authors = [
     {name = "Etalab", email = "etalab@modernisation.gouv.fr"}
 ]
@@ -21,5 +28,5 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/albert-data-collections"
-Repository = "https://github.com/yourusername/albert-data-collections"
+Homepage = "https://github.com/etalab/albert-data-collections"
+Repository = "https://github.com/etalab/albert-data-collections"
