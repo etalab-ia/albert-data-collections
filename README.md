@@ -7,7 +7,7 @@ Useful functionalities and pipelines related to ALBERT's data collections.
 Create a virtual environment:
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
 ```
 
 Install dependencies:
