@@ -1,0 +1,3 @@
+# Updating collections dictionnary
+# Everyday at 8 am
+0 8 * * * /home/albert/albert-data-collections/daily_update.sh >> /home/albert/albert-data-collections/logs/cron.log 2>&1
