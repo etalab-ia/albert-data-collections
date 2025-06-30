@@ -27,7 +27,13 @@ Then edit the `.env` file with your actual values.
 
 ## Usage
 
-Update collections dictionary:
+Update collections dictionary 
+Basic method:
 ```bash
 python main.py update_collections_dict
+```
+
+Complete method:
+```bash
+source daily_update.sh
 ```
