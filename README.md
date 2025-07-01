@@ -37,3 +37,8 @@ Complete method:
 ```bash
 source daily_update.sh
 ```
+
+Automatic method (cron):
+```bash
+sudo -u USERNAME crontab cron_config.txt
+```
