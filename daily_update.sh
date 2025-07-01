@@ -3,10 +3,15 @@
 # Daily automation script for albert-data-collections
 # This script handles: git pull, virtual environment, dependencies and execution
 
+# Fix environment for cron
+export HOME=/home/albert
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 set -e  # Stops the script on any error
 
 # Configuration
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="/home/albert/albert-data-collections"
 VENV_DIR="$SCRIPT_DIR/venv"
 LOG_FILE="$SCRIPT_DIR/logs/daily_update.log"
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
