@@ -4,14 +4,14 @@
 # This script handles: git pull, virtual environment, dependencies and execution
 
 # Fix environment for cron
-export HOME=/home/albert
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# export HOME=/home/albert
+# export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 set -e  # Stops the script on any error
 
 # Configuration
-# SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SCRIPT_DIR="/home/albert/albert-data-collections"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# SCRIPT_DIR="/home/albert/albert-data-collections"
 VENV_DIR="$SCRIPT_DIR/venv"
 LOG_FILE="$SCRIPT_DIR/logs/daily_update.log"
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
@@ -75,7 +75,8 @@ fi
 
 # 7. Committing changes to the git repository
 log "Committing changes to the git repository..."
-if git add --all && git commit -m "Daily collections dictionnary update on $(date +'%Y-%m-%d %H:%M:%S')" 2>&1 | tee -a "$LOG_FILE"; then
+# if git add --all && git commit -m "Daily collections dictionnary update on $(date +'%Y-%m-%d %H:%M:%S')" 2>&1 | tee -a "$LOG_FILE"; then
+if git add --all && git commit -m "TEST" 2>&1 | tee -a "$LOG_FILE"; then
     log "Changes committed successfully"
 else
     log "ERROR: Failed to commit changes to the git repository"
