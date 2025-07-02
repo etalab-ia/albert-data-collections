@@ -27,7 +27,7 @@
         ],
         "id": 783
     },
-    "data_gouv_datasets_catalog": {
+    "data-gouv-datasets-catalog": {
         "full_name": "Catalogue des jeux de données data.gouv.fr",
         "metadatas_to_display": [
             "title",
