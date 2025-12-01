@@ -4,13 +4,15 @@
 # This script handles: git pull, virtual environment, dependencies and execution
 
 # Fix environment for cron
-export HOME=/home/albert
+if [ -z "$HOME" ]; then
+    export HOME="/home/$(whoami)"
+fi
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 set -e  # Stops the script on any error
 
 # Configuration
-SCRIPT_DIR="/home/albert/albert-data-collections"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 VENV_DIR="$SCRIPT_DIR/venv"
 LOG_FILE="$SCRIPT_DIR/logs/daily_update.log"
 
